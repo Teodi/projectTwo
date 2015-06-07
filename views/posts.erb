@@ -1,0 +1,16 @@
+<h1>Teopedia</h1>
+
+
+<form method="POST" action="/users/index.erb">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="log out">
+</form>
+
+<p>Articles</p>
+<ul>
+  <% @posts.each do |post| %>
+  <li><a href="/posts/<%= post['id'] %>" > <%= post["article_title"] %> </a></li>
+  <% end %>
+</ul>
+<br>
+<p><a href="/create_post">Create new</a></p>
