@@ -1,0 +1,17 @@
+
+.main{
+
+  background-color: white;
+  width: 800px;
+  height: 1000px;
+  padding-right: 500px;
+  padding-left: 500px;
+}
+
+
+.logo{
+  position: absolute;
+  top:500px;
+  left:990px;
+}
+

@@ -50,12 +50,24 @@ module Teopedia
     end
 
     post '/create_account' do
-      erb :homepage
+      erb :create_user
     end
+    post '/create_account' do
+  $db.exec_params("INSERT INTO Teopedia")
+  redirect # somewhere
+end
 
     post '/create_post' do
       erb :create_post
     end
+
+    get '/create_post' do
+  erb :create_post
+end
+post '/create_post' do
+  $db.exec_params("INSERT INTO Teopedia")
+  redirect "/users/#{user_id}"
+end
 
     get '/profile' do
       erb :profile

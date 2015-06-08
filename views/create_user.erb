@@ -1,3 +1,14 @@
-<% @users.each do |user| %>
-    <li><%= user['name'] %> <a href="mailto:<%=user['email']%>"><%= user['email']%></a></li>
-  <% end %>
+
+
+  <form method="POST" action="/users/login">
+  <label>name</label>
+  <input type="text" name="full_name" placeholder="full name">
+  <br>
+  <label>user</label>
+  <input type="text" name="username" placeholder="username">
+  <br>
+  <label>*</label>
+  <input type="password" name="password" placeholder="password">
+  <input type="submit" value="create">
+  </form>
+

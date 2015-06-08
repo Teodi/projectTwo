@@ -1,4 +1,4 @@
-<h1>Teopedia</h1>
+<h1>TEOPEDIA</h1>
 
 
 <form method="POST" action="/users/index.erb">
@@ -6,11 +6,14 @@
   <input type="submit" value="log out">
 </form>
 
-<p>Articles</p>
+<p>Posts</p>
 <ul>
   <% @posts.each do |post| %>
   <li><a href="/posts/<%= post['id'] %>" > <%= post["article_title"] %> </a></li>
   <% end %>
 </ul>
 <br>
-<p><a href="/create_post">Create new</a></p>
+<form method="POST" action="/create_post">
+  <input type="submit" value="Create Post">
+</form>
+
